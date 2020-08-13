@@ -1,6 +1,6 @@
 module.exports = {
     name: 'args-info',
-    description: 'Information about arguments',
+    description: 'Information about the arguments provided.',
     args: true,
     usage: '<user> <role>',
     execute(message, args) {
@@ -8,6 +8,6 @@ module.exports = {
             return message.channel.send('bar');
         }
 
-        message.channel.send(`Arguments: ${args}\nArguments length: ${args/length}`);
-    }
-}
+        message.channel.send(`Arguments: ${args}\nArguments length: ${args.length}`);
+    },
+};
